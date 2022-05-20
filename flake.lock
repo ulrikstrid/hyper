@@ -1,0 +1,83 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1649838635,
+        "narHash": "sha256-P1h48+l9vUvMz4JwHBgkTXiX6mE8oYR75vBVUbe6Cuc=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "40a58baa248a8b335e2d66ca258a74248af9d834",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1652885393,
+        "narHash": "sha256-YIgvvlk4iQ1Hi7KD9o5gsojc+ApB+jiH1d5stK8uXiw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "48037fd90426e44e4bf03e6479e88a11453b9b66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "ocaml-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1653027407,
+        "narHash": "sha256-XCYCfmUbP5QIU0xl+WAgkhzD88BRMygbpmhfSWSbXEI=",
+        "owner": "anmonteiro",
+        "repo": "nix-overlays",
+        "rev": "a42be0599f9d36b500e296c2b94eb1db57f9a9da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anmonteiro",
+        "repo": "nix-overlays",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nix-filter": "nix-filter",
+        "nixpkgs": "nixpkgs",
+        "ocaml-overlay": "ocaml-overlay"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

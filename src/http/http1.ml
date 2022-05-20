@@ -115,6 +115,7 @@ let general send_request client connection (request : Message.request) =
   let httpaf_request_body_writer =
     send_request
       client
+      ?flush_headers_immediately:(Some true)
       httpaf_request
       ~error_handler
       ~response_handler
@@ -161,10 +162,8 @@ let general send_request client connection (request : Message.request) =
 
   response_promise
 
-
-
 let http client =
-  general Httpaf_lwt_unix.Client.request client client.connection
+  general Httpaf_lwt_unix.Client.request client client.connection 
 
 let https client =
-  general Httpaf_lwt_unix.Client.SSL.request client client.connection
+  general Httpaf_lwt_unix.Client.SSL.request client client.connection 

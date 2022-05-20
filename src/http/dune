@@ -4,12 +4,12 @@
  (libraries
   dream-httpaf
   dream-pure
-  dream-httpaf.h2
-  dream-httpaf.h2-lwt-unix
-  dream-httpaf.httpaf
-  dream-httpaf.httpaf-lwt-unix
-  dream-httpaf.websocketaf
-  dream-httpaf.websocketaf-lwt-unix
+  h2
+  h2-lwt-unix
+  httpaf
+  httpaf-lwt-unix
+  websocketaf
+  websocketaf-lwt-unix
   mirage-crypto-rng
   mirage-crypto-rng.lwt
   uri
