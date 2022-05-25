@@ -75,7 +75,7 @@ let http1_cleartext_tcp target =
 let alpn_https_tcp ?(protocols = ["h2"; "http/1.1"]) target =
   (* TODO The context needs to be created once per process, or a cache
      should be used. *)
-  let context = Ssl.(create_context TLSv1_2 Client_context) in
+  let context = Ssl.(create_context (Versions.TLS.to_max_version max_tls_version) Client_context) in
   (* TODO For WebSockets (wss://), the client should probably do SSL
       without offering h2 by ALPN. Do any servers implement WebSockets over
       HTTP/2? *)
